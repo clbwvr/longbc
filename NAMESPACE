@@ -1,3 +1,4 @@
 useDynLib(longbc)
 import(RcppEigen)
 importFrom(Rcpp, evalCpp)
+export(longbc)

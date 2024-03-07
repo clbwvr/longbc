@@ -4,8 +4,8 @@
 
 You can install from github using the R package [devtools] (http://cran.r-project.org/web/packages/devtools/index.html)
 
-	install_github('longbc','clbwvr')
+	install_github('longbc/clbwvr')
 
-or from the command line
+or clone the project from the command line
 
 	git clone https://github.com/clbwvr/longbc.git	
