@@ -3,7 +3,7 @@
 #' \code{longbc} estimates the underlying biclustering structure and coefficients of an input data set. This function calls \code{cppadmm} for performing most of the computation.
 #' longbc = function(dat, lambdas, V=NULL, tol.abs=1e-3, tol.rel = 1e-3, niter = 20, rho = 1, tausd = 1/4, XtXrhoDeltai=NULL, verbose=TRUE){
 #' @param dat The input data.frame with columns "subj","feat","t", and "y" for the subject, feature, time, and response variables, respectively.
-#' @param lambda A vector of regularization parameter values
+#' @param lambdas A vector of regularization parameter values
 #' @param V The plug-in estimator for the covariance matrix of the random intercepts. If NULL, a compound symmetric correlation structure will be estimated from the data.
 #' @param tol.abs The absolute convergence tolerance
 #' @param tol.rel The relative convergence tolerance
@@ -254,7 +254,6 @@ longbc = function(dat, lambdas, V=NULL, tol.abs=1e-2, tol.rel = 1e-3, niter = 50
 
 #' @export
 ari.longbc = function(obj,truth){
-  require(mclust)
   cblist = lapply(obj$fits, function(u) u$df[,c("subj","feat","cb")])
   aris = sapply(cblist, function(u){
     truth = truth[,c("subj","feat","cb")]
@@ -266,7 +265,6 @@ ari.longbc = function(obj,truth){
 
 #' @export
 bic.longbc = function(obj){
-  require(mclust)
   cblist = lapply(obj$fits, function(u) u$df[,c("subj","feat","cb")])
   dat1 = obj$dat
   bics = sapply(cblist, function(u){

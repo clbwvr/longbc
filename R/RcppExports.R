@@ -77,19 +77,3 @@ cppadmm <- function(a, blist, clist, deltalist, etalist, subj, feat, n, p, X, y,
     .Call('_longbc_cppadmm', PACKAGE = 'longbc', a, blist, clist, deltalist, etalist, subj, feat, n, p, X, y, lambda, wsubj, wfeat, wlrsubj, wlrfeat, Xty, XtXrhoDeltai, rho, niter, tolrel, tolabs, trace, loud)
 }
 
-rcppeigen_hello_world <- function() {
-    .Call('_longbc_rcppeigen_hello_world', PACKAGE = 'longbc')
-}
-
-rcppeigen_outerproduct <- function(x) {
-    .Call('_longbc_rcppeigen_outerproduct', PACKAGE = 'longbc', x)
-}
-
-rcppeigen_innerproduct <- function(x) {
-    .Call('_longbc_rcppeigen_innerproduct', PACKAGE = 'longbc', x)
-}
-
-rcppeigen_bothproducts <- function(x) {
-    .Call('_longbc_rcppeigen_bothproducts', PACKAGE = 'longbc', x)
-}
-

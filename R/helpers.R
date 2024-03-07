@@ -81,7 +81,6 @@ makekey = function (A){
 }
 
 summarySE <- function(data=NULL, measurevar, groupvars=NULL, na.rm=FALSE,conf.interval=.95, .drop=TRUE) {
-  library(plyr)
   length2 <- function (x, na.rm=FALSE) {
     if (na.rm) sum(!is.na(x))
     else       length(x)
