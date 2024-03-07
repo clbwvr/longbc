@@ -39,10 +39,10 @@ longbc(
 
 \item{trace}{Flag for objective function tracking}
 
-\item{lambda}{A vector of regularization parameter values}
+\item{lambdas}{A vector of regularization parameter values}
 }
 \description{
-
+Implementation of the model proposed in "Biclustering Multivariate Longitudinal Data with Application to a Diffusion Tensor Imaging Study".
 }
 \author{
 Caleb Weaver
