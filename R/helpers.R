@@ -1,3 +1,4 @@
+#' @export
 matshow = function (A, key=FALSE, labRow = FALSE,labCol = FALSE,...){
   cols = rev(usecol(c(rev(brewer.pal(n = 7, name = "Reds")), "white", brewer.pal(n = 7, name = "Blues")), n = 256))
   #cols = usecol(c("#000089", "#0000ff","#8989ff","white", "#ff8989", "#ff0000","#890000"), n = 256)
