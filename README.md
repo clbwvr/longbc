@@ -15,6 +15,7 @@ or clone the project from the command line
 The following illustrates the usage of the main function.
 
 ```
+# Load required packages 
 library(longbc)
 library(Matrix)
 library(data.table)
@@ -25,7 +26,7 @@ simdat = longbc::simdat
 lambdas = exp(seq(log(1),log(1e4),length.out=20))
 mod = longbc(simdat, lambdas=lambdas)
 
-# Plot best fit results
+# Plot results
 i = 15
 labrow = mod$fits[[i]]$cs
 labcol = mod$fits[[i]]$cf
