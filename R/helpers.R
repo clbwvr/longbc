@@ -1,7 +1,7 @@
 #' @export
 matshow = function (A, key=FALSE, labRow = FALSE,labCol = FALSE,...){
   # Define the color palette
-  palette = colorRampPalette(c(brewer.pal(n = 7, name = "Reds"), "white", brewer.pal(n = 7, name = "Blues")))
+  palette = colorRampPalette(rev(c(rev(brewer.pal(n = 7, name = "Reds")), "white", brewer.pal(n = 7, name = "Blues"))))
   cols = palette(256)
   if(length(unique(A)) == 2) cols = rep("#FB7B5B",length(cols))
   if(key){
