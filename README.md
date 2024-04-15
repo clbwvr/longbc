@@ -20,6 +20,7 @@ library(longbc)
 library(Matrix)
 library(data.table)
 library(RColorBrewer)
+library(gplots)
 
 # Fit model to simulated data
 simdat = longbc::simdat
