@@ -1,9 +1,8 @@
 #' @export
 matshow = function (A, key=FALSE, labRow = FALSE,labCol = FALSE,...){
-  cols = rev(usecol(c(rev(brewer.pal(n = 7, name = "Reds")), "white", brewer.pal(n = 7, name = "Blues")), n = 256))
-  #cols = usecol(c("#000089", "#0000ff","#8989ff","white", "#ff8989", "#ff0000","#890000"), n = 256)
-  #cols = usecol(c("#0000ff","white",  "#ff0000"), n = 256)
-  #cols = rbcols
+  # Define the color palette
+  palette = colorRampPalette(c(brewer.pal(n = 7, name = "Reds"), "white", brewer.pal(n = 7, name = "Blues")))
+  cols = palette(256)
   if(length(unique(A)) == 2) cols = rep("#FB7B5B",length(cols))
   if(key){
     heatmap.2(A,symm=F,symkey=F,symbreaks=T, scale="none",density.info = "none",labRow=labRow, labCol=labCol, col = cols, na.color="white",tracecol=NA,dendrogram = "none",Rowv = FALSE, Colv = FALSE,key=TRUE,...)
